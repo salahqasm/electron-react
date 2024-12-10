@@ -3,18 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist-electron/main.js",
+  "main": "dist-electron/electron/main.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:react dev:electron",
     "dev:react": "vite",
     "dev:electron": "npm run transpile:electron; cross-env NODE_ENV=development electron .",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "transpile:electron": "tsc --project src/electron/tsconfig.json",
     "build:mac": "npm run transpile:electron && npm run build && electron-builder --mac --arm64",
     "build:win": "npm run transpile:electron && npm run build && electron-builder --win --x64",
-    "build:linux": "npm run transpile:electron && npm run build && electron-builder --linux --x64"
+    "build:linux": "npm run transpile:electron && npm run build && electron-builder --linux --x64",
+    "build": "tsc -b && vite build",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^18.3.1",
