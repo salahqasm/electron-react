@@ -2,6 +2,7 @@
   "appId": "com.salah.elab",
   "files": ["dist-electron", "dist-ui"],
   "icon": "./desktopIcon.png",
+  "extraResources": ["dist-electron/electron/preload.cjs"],
   "mac": {
     "target": "dmg"
   },
@@ -10,6 +11,6 @@
     "category": "Utility"
   },
   "win": {
-    "target": ["portable", "msi"]
+    "target": ["portable"]
   }
 }
